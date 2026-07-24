@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SwiftSurvey Dashboard</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(0,50,20,0.5),
+rgba(0,0,0,0.75)
+),
+url("people-shaking-hands.jpg");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+
+}
+
+
+/* Top bar */
+
+.top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px;
+
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(15px);
+
+}
+
+
+.balance{
+
+background:#00ff88;
+
+color:#003300;
+
+padding:12px 20px;
+
+border-radius:25px;
+
+font-weight:bold;
+
+}
+
+
+/* Hamburger */
+
+.menu-btn{
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+
+
+/* Side menu */
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+
+right:-300px;
+
+width:280px;
+
+height:100%;
+
+background:rgba(0,0,0,0.9);
+
+padding:30px;
+
+transition:.4s;
+
+z-index:5;
+
+}
+
+
+.sidebar.active{
+
+right:0;
+
+}
+
+
+.sidebar h2{
+
+color:#00ff88;
+
+margin-bottom:30px;
+
+}
+
+
+.sidebar a{
+
+display:block;
+
+padding:15px;
+
+color:white;
+
+text-decoration:none;
+
+border-bottom:1px solid #333;
+
+}
+
+
+.sidebar a:hover{
+
+background:#00ff88;
+
+color:black;
+
+}
+
+
+
+/* Main */
+
+.container{
+
+padding:25px;
+
+}
+
+
+
+.logo{
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#00ff88;
+
+}
+
+
+.card{
+
+margin-top:20px;
+
+padding:25px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.12);
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+
+margin-top:20px;
+
+}
+
+
+.item{
+
+padding:25px;
+
+background:rgba(255,255,255,0.12);
+
+border-radius:20px;
+
+}
+
+
+.item h3{
+
+color:#00ff88;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="top">
+
+<div class="balance">
+Wallet: KES 0.00
+</div>
+
+
+<div class="menu-btn" onclick="openMenu()">
+☰
+</div>
+
+
+</div>
+
+
+
+<div class="sidebar" id="menu">
+
+
+<h2>
+SwiftSurvey
+</h2>
+
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="surveys.html">📝 Surveys</a>
+
+<a href="wallet.html">💰 Wallet</a>
+
+<a href="invest.html">📈 Invest</a>
+
+<a href="rewards.html">🎁 Rewards</a>
+
+<a href="profile.html">👤 Profile</a>
+
+<a href="#" onclick="logout()">🚪 Logout</a>
+
+
+</div>
+
+
+
+<div class="container">
+
+
+<div class="logo">
+SwiftSurvey
+</div>
+
+
+<div class="card">
+
+<h1>
+Welcome back 👋
+</h1>
+
+<p>
+Complete surveys, earn rewards and invest your earnings.
+</p>
+
+</div>
+
+
+
+<div class="grid">
+
+
+<div class="item">
+
+<h3>📝 Surveys</h3>
+
+<p>Available surveys</p>
+
+</div>
+
+
+<div class="item">
+
+<h3>📈 Investment</h3>
+
+<p>Grow your earnings</p>
+
+</div>
+
+
+<div class="item">
+
+<h3>🎁 Rewards</h3>
+
+<p>Your achievements</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function openMenu(){
+
+document
+.getElementById("menu")
+.classList.toggle("active");
+
+}
+
+
+
+function logout(){
+
+localStorage.removeItem("token");
+
+window.location.href="login.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
