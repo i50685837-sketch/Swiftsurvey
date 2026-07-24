@@ -15,7 +15,7 @@ const makeAdmin = async () => {
         );
 
 
-        const email = "your-email@example.com";
+        const email = "humblemorde@gmail.com";
 
 
         const user = await User.findOne({
