@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SwiftSurvey.com</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+
+body{
+
+height:100vh;
+overflow:hidden;
+
+background:
+linear-gradient(
+rgba(0,50,20,0.45),
+rgba(0,0,0,0.65)
+),
+url("people-shaking-hands.jpg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+/* Center section */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+
+
+/* Glass box */
+
+.glass{
+
+width:90%;
+
+max-width:650px;
+
+padding:55px 40px;
+
+background:
+
+rgba(255,255,255,0.12);
+
+
+backdrop-filter:blur(15px);
+
+
+border-radius:30px;
+
+
+border:
+
+1px solid rgba(255,255,255,0.3);
+
+
+color:white;
+
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+
+h1{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+
+h1 span{
+
+color:#00ff88;
+
+}
+
+
+
+p{
+
+font-size:20px;
+
+line-height:1.6;
+
+margin-bottom:35px;
+
+}
+
+
+
+/* Button */
+
+.start{
+
+display:inline-block;
+
+padding:16px 55px;
+
+background:#00ff88;
+
+color:#003300;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+
+
+.start:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 25px #00ff88;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="hero">
+
+<div class="glass">
+
+
+<h1>
+Welcome to 
+<span>SwiftSurvey.com</span>
+</h1>
+
+
+<p>
+Complete surveys, share opinions, earn rewards, and invest your earnings with SwiftSurvey.
+</p>
+
+
+<a href="register.html" class="start">
+Get Started
+</a>
+
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>
