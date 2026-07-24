@@ -20,6 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/profile", require("./routes/profile"));
 app.use("/api/withdrawals", require("./routes/withdrawals"));
+app.use("/api/admin-dashboard", require("./routes/adminDashboard"));
 
 
 // Test API
