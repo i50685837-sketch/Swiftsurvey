@@ -18,6 +18,7 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/api/profile", require("./routes/profile"));
 
 
 // Test API
@@ -29,12 +30,15 @@ app.get("/", (req, res) => {
 });
 
 
-// Routes
+// API Routes
+
 app.use("/api/auth", require("./routes/auth"));
 
 app.use("/api/payments", require("./routes/payments"));
 
 app.use("/api/wallet", require("./routes/wallet"));
+
+app.use("/api/profile", require("./routes/profile"));
 
 
 // Server
